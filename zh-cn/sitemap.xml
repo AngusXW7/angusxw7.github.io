@@ -40,4 +40,17 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="https://angusxw7.github.io/zh-cn/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/about/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/about/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="fr"
+                        href="https://angusxw7.github.io/fr/about/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/about/"
                     /></url></urlset>
