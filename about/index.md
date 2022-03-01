@@ -1,4 +1,4 @@
-# About LoveIt
+# About XW7&
 
 
 ### class XW7&
@@ -6,12 +6,12 @@
  #### struct Information
 
   **{**   
-  * **major** Game Design and Game Programming；
-  * **programmingLanguage** C++ ；
-  * **dream** Make a MMORPG national style game that players will naturally love(Hanbok forever god!)；
-  * **personality** Tolerant, friendly, lively and cheerful, slow-acting personality, responsible, tolerant and patient, team player, always have the unexpected and creative proposals；
-  * **hobbies** play games,listen to songs,travel,looking at photos taken by others, watching others eat food, and enjoying all kinds of fun, techy gadgets (e.g. drones)；
-  * **favourite cities** Hainan, Zhuhai, Xi'an;
+  * **major** : Game Design and Game Programming；
+  * **programmingLanguage** : C++ ；
+  * **dream** : Make a MMORPG national style game that players will naturally love(Hanbok forever god!)；
+  * **personality** : Tolerant, friendly, lively and cheerful, slow-acting personality, responsible, tolerant and patient, team player, always have the unexpected and creative proposals；
+  * **hobbies** : play games,listen to songs,travel,looking at photos taken by others, watching others eat food, and enjoying all kinds of fun, techy gadgets (e.g. drones)；
+  * **favourite cities** : Hainan, Zhuhai, Xi'an;
   * ... ;   
 
   **}**
@@ -52,3 +52,16 @@
    **}**
 
  **}**
+
+   #### struct Contact
+
+ **{**
+* [Bilibili](https://space.bilibili.com/474685010);
+* **Email** :  angusli951102@gmail.com；
+* [Github](https://github.com/AngusXW7);
+* [LinkIn](www.linkedin.com/in/angus-li-951102);
+* **QQ** :  714152655;
+* [Steam](https://steamcommunity.com/profiles/76561198383512937/);
+* [Weibo](https://weibo.com/2153482747/profile?is_all=1);
+  
+**}**
