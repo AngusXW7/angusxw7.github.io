@@ -4,7 +4,14 @@
         <link>https://angusxw7.github.io/fr/</link>
         <description>À propos du XW7&amp;</description>
         <generator>Hugo -- gohugo.io</generator><language>fr</language><managingEditor>angusli951102@gmail.com (XW7&amp;)</managingEditor>
-            <webMaster>angusli951102@gmail.com (XW7&amp;)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+            <webMaster>angusli951102@gmail.com (XW7&amp;)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 15 Feb 2022 18:10:25 -0800</lastBuildDate>
             <atom:link href="https://angusxw7.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
-        </channel>
+        <item>
+    <title>TestBlog</title>
+    <link>https://angusxw7.github.io/fr/testblog/</link>
+    <pubDate>Tue, 15 Feb 2022 18:10:25 -0800</pubDate>
+    <author>Auteur</author>
+    <guid>https://angusxw7.github.io/fr/testblog/</guid>
+    <description><![CDATA[This is for test.]]></description>
+</item></channel>
 </rss>

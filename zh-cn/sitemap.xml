@@ -2,7 +2,16 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://angusxw7.github.io/zh-cn/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://angusxw7.github.io/zh-cn/hello-world/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/hello-world/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/hello-world/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/categories/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://angusxw7.github.io/categories/"
@@ -15,7 +24,56 @@
                     hreflang="zh-cn"
                     href="https://angusxw7.github.io/zh-cn/categories/"
                     /></url><url>
-            <loc>https://angusxw7.github.io/zh-cn/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://angusxw7.github.io/zh-cn/tags/general/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/tags/general/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/tags/general/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/categories/general/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/categories/general/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/categories/general/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/tags/hello-world/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/tags/hello-world/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/tags/hello-world/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/tags/others/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/tags/others/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/tags/others/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/posts/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/posts/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="fr"
+                        href="https://angusxw7.github.io/fr/posts/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/posts/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/tags/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://angusxw7.github.io/tags/"
@@ -28,7 +86,7 @@
                     hreflang="zh-cn"
                     href="https://angusxw7.github.io/zh-cn/tags/"
                     /></url><url>
-            <loc>https://angusxw7.github.io/zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://angusxw7.github.io/zh-cn/</loc><lastmod>2022-03-02T16:53:13-08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://angusxw7.github.io/"
@@ -40,6 +98,19 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="https://angusxw7.github.io/zh-cn/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/testblog/</loc><lastmod>2022-02-15T18:10:25-08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/testblog/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="fr"
+                        href="https://angusxw7.github.io/fr/testblog/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/testblog/"
                     /></url><url>
             <loc>https://angusxw7.github.io/zh-cn/about/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
@@ -53,4 +124,17 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="https://angusxw7.github.io/zh-cn/about/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/zh-cn/categories/documentation/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/categories/documentation/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="fr"
+                        href="https://angusxw7.github.io/fr/categories/documentation/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://angusxw7.github.io/zh-cn/categories/documentation/"
                     /></url></urlset>
