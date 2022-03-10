@@ -4,7 +4,14 @@
         <link>https://angusxw7.github.io/zh-cn/posts/</link>
         <description>所有文章 | XW7&amp; Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>angusli951102@gmail.com (XW7&amp;)</managingEditor>
-            <webMaster>angusli951102@gmail.com (XW7&amp;)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 02 Mar 2022 16:53:13 -0800</lastBuildDate><atom:link href="https://angusxw7.github.io/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>angusli951102@gmail.com (XW7&amp;)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 09 Mar 2022 18:52:30 -0800</lastBuildDate><atom:link href="https://angusxw7.github.io/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43; 指针</title>
+    <link>https://angusxw7.github.io/zh-cn/c_pointer/</link>
+    <pubDate>Wed, 09 Mar 2022 18:52:30 -0800</pubDate>
+    <author>作者</author>
+    <guid>https://angusxw7.github.io/zh-cn/c_pointer/</guid>
+    <description><![CDATA[<p>C系列语言的精髓 指针！</p>]]></description>
+</item><item>
     <title>你好，世界！</title>
     <link>https://angusxw7.github.io/zh-cn/hello-world/</link>
     <pubDate>Wed, 02 Mar 2022 16:53:13 -0800</pubDate>

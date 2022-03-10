@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>C&#43;&#43; 指针 - XW7&amp; Blog</title><meta name="Description" content="关于C指针的一点拙见"><meta property="og:title" content="C&#43;&#43; 指针" />
+<meta property="og:description" content="关于C指针的一点拙见" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://angusxw7.github.io/zh-cn/c_pointer/" /><meta property="og:image" content="https://angusxw7.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-09T18:52:30-08:00" />
+<meta property="article:modified_time" content="2022-03-09T18:52:30-08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://angusxw7.github.io/logo.png"/>
+
+<meta name="twitter:title" content="C&#43;&#43; 指针"/>
+<meta name="twitter:description" content="关于C指针的一点拙见"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://angusxw7.github.io/zh-cn/c_pointer/" /><link rel="prev" href="https://angusxw7.github.io/zh-cn/hello-world/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "C++ 指针",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/angusxw7.github.io\/zh-cn\/c_pointer\/"
+        },"image": ["https:\/\/angusxw7.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Pointer, C\u002b\u002b, essence","wordcount":  2242 ,
+        "url": "https:\/\/angusxw7.github.io\/zh-cn\/c_pointer\/","datePublished": "2022-03-09T18:52:30-08:00","dateModified": "2022-03-09T18:52:30-08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "XW7\u0026","logo": "https:\/\/angusxw7.github.io\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "XW7\u0026"
+            },"description": "关于C指针的一点拙见"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/zh-cn/" title="XW7&amp; Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>XW7&amp; Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/zh-cn/posts/"> 所有文章 </a><a class="menu-item" href="/zh-cn/tags/"> 标签 </a><a class="menu-item" href="/zh-cn/categories/"> 分类 </a><a class="menu-item" href="/zh-cn/about/"> 关于XW7&amp; </a><a class="menu-item" href="https://github.com/angusXW7" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/c_pointer/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/zh-cn/" title="XW7&amp; Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>XW7&amp; Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/zh-cn/posts/" title="">所有文章</a><a class="menu-item" href="/zh-cn/tags/" title="">标签</a><a class="menu-item" href="/zh-cn/categories/" title="">分类</a><a class="menu-item" href="/zh-cn/about/" title="">关于XW7&amp;</a><a class="menu-item" href="https://github.com/angusXW7" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/zh-cn/c_pointer/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">C&#43;&#43; 指针</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://angusxw7.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>XW7&</a></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/c++/"><i class="far fa-folder fa-fw"></i>C++</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-09">2022-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2242 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/zh-cn/c_pointer/" class="leancloud_visitors" data-flag-title="C&#43;&#43; 指针">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#指针是什么">指针是什么</a>
+      <ul>
+        <li><a href="#我们还是来举个例子吧">我们还是来举个例子吧：</a></li>
+        <li><a href="#heading">“*”</a></li>
+      </ul>
+    </li>
+    <li><a href="#const与的爱恨情仇">const与*的爱恨情仇</a>
+      <ul>
+        <li><a href="#技巧">技巧</a></li>
+        <li><a href="#用途">用途</a></li>
+        <li><a href="#延伸">延伸</a></li>
+      </ul>
+    </li>
+    <li><a href="#数组与的爱恨情仇">数组与*的爱恨情仇</a>
+      <ul>
+        <li><a href="#示例">示例</a></li>
+      </ul>
+    </li>
+    <li><a href="#指针操作">指针操作</a></li>
+    <li><a href="#分享总结">分享总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>C系列语言的精髓 指针！</p>
+<p>哈喽，我又在百忙之中抽出时间如约而至啦。今天来浅谈一下指针吧，都说C的精髓就是指针，不过也确实，C应该是为数不多可以凭借指针操控底层内存的高级语言了。我的理解程度肯定没有大神级别的那么深，毕竟是个刚入门的小白，用词不准确或者逻辑不严谨的话，还请多指教啦~，如果有哪里说的不对，也欢迎指出！</p>
+<h2 id="指针是什么">指针是什么</h2>
+<p>那展开问题之前，我们要先搞清楚指针是什么。</p>
+<p>我们经常说，指针就是地址，指针变量是用来存放内存地址的变量的。</p>
+<p>我的理解呢，指针就相当于你家的代名词，而内存地址就是你家实际在的地方。常说的指针指向了某某地址，其实就是在说，你家这个代名词说明了你家地址所在地（就是你家住哪）。这样讲听着有点像废话。</p>
+<h3 id="我们还是来举个例子吧">我们还是来举个例子吧：</h3>
+<p>我们有一个整形指针 <strong>ptr</strong> （我家代名词）：  <strong>int* ptr</strong>  ;</p>
+<p>这个指针指向了（我家实际地址）：<strong>0X12345678</strong>; //一般情况下内存地址用八位的十六进制表示，0X开头是为了和二进制，八进制还有十进制作区分</p>
+<p>一般写成 <strong>int* ptr = &amp; XW7的家</strong>;</p>
+<p>我们先忽略这个 “&amp;” ，把 “=” 读作 “是” ，那么现在这句话是不是就在说 ptr 是 xw7的家。</p>
+<p>接下来，比如我要邀请我的朋友周末来我家玩，那我光和他说 ptr 他肯定不能平白无故的知道我家在哪，对吧。</p>
+<p>所以我们要用“&amp;”表示地址，那么int* ptr = &amp; XW7的家 现在就变成了 ptr = 12市34区56街78号，即我家的实际地址，同样的，我们把“=”读作“是”，XW7的家是12市34区56街78号。这样我的朋友们周末就可以顺利的找到我家了。</p>
+<h3 id="heading">“*”</h3>
+<p>&ldquo;<strong>*</strong>&ldquo;这个符号呢跟随不同的主人，就会代表不同的意思，我们俗称嫁鸡随鸡嫁狗随狗。</p>
+<p>但是我们不会看见int* * 变量名（int* *ptr） 这种东西存在的；</p>
+<p>我们只会看到int* 变量名 = 什么;</p>
+<p>或者 *ptr = 什么;</p>
+<p>一般情况下，如果它跟的是数据类型，比如 <strong>char int float</strong> 这种，那么它就代表这个类型的指针</p>
+<p><strong>char*</strong> 就是 <strong>char</strong> 类型指针;</p>
+<p><strong>int*</strong> 就是 <strong>int</strong> 类型指针;</p>
+<p><strong>float*</strong> 就是 <strong>float</strong> 类型指针;</p>
+<p>以此类推</p>
+<p>// 32位系统下，所有的指针大小都为4字节；</p>
+<p>但是如果它跟了变量名称，就比如上面的 <strong>*ptr</strong> 那它就代表解引用了，就要使用代名词了。通俗的来讲给 <strong>ptr</strong> 加上了 <strong>*</strong> 就是把 <strong>ptr</strong> 被加密了 只能说 <strong>XW7的家</strong> ， 而不能将 <strong>12市34区56街78号</strong> 这个确切的地址讲出来。即 <strong>*ptr = XW7的家 , *ptr是XW7的家</strong>。</p>
+<h2 id="const与的爱恨情仇">const与*的爱恨情仇</h2>
+<p>我相信很多人都因为 const和 * 的摆放位置而被搞得晕头转向过，不过当你抓住的精髓，你就会觉得非常的简单了。什么指针常量，常量指针的，一眼就可以分辨出来。</p>
+<p>首先可能有人问，const是什么东西啊。哈哈， cosnt其实就是一个修饰词，被他修饰的东西不可以改变。</p>
+<p>这里我分享一下我的小技巧：</p>
+<h3 id="技巧">技巧</h3>
+<p>首先我们列出来几种很常见的格式：</p>
+<p>1.const int * ptr；</p>
+<p>2.int const * ptr；</p>
+<p>3.int * const ptr；</p>
+<p>我们要怎么来区分呢?很简单,我们只需要看两个东西，一个就是 <strong>*</strong> 还有一个就是 <strong>ptr</strong>;</p>
+<p>如果const后面紧跟着的是 <strong>*</strong> 那么毫无疑问 const 修饰了 * ，代表 *指向的东西不可以改变；//1,2</p>
+<p>如果const后面紧跟着的是 <strong>变量名</strong> （即ptr），那么const就是修饰了变量名，代表变量名所代表的值不可以被改变。//3</p>
+<p>还有一件非常重要的事情，就是const是一次性的，要是想要多个不能被改变的指向或者值，就要使用多个const，如：</p>
+<p>const int* const ptr; // int* 与 ptr 都不可变
+const int* const p1, const p2; // int* p1 p2全都不可变</p>
+<h3 id="用途">用途</h3>
+<p>那么知道谁不可以改变以后，我们要用它们来干什么呢；首先我们从命名语句中可以得到两个比较有用的信息，一个是指针指向谁，还有一个就是指向的东西包含了什么内容。</p>
+<p>我们用租房子来举例子，指针代表房子，里面的内容代表租客；</p>
+<p>如果指向的东西不能改变，那现在就是房东身份，也就是说只要是我的房子就行，哪些租客无所谓，可以随意更换。</p>
+<p>如果指向的内容不能改变，那现在就是租客身份，也就是说只要是我在租房就行，哪间房子无所谓，可以随意更换。</p>
+<h3 id="延伸">延伸</h3>
+<p>再往下延伸呢，应该就要触及到对象和类了，我们简单的说一下；</p>
+<p>1.const 返回类型 函数名 （参数）； // 表示我的返回类型不能修改</p>
+<p>2.返回类型 函数名 （const 参数）；// 表示我的传入参数不能修改</p>
+<p>3.返回类型 函数名 （参数）const ；// 表示我的类成员参数不能修改</p>
+<h2 id="数组与的爱恨情仇">数组与*的爱恨情仇</h2>
+<p>我们都知道当数组被当做参数传入函数的的时候会被隐式的退化成指针，所以我们任性的把数组当成一种指针</p>
+<p>下面我们来说几种容易让人混淆的数组与*的组合：</p>
+<h3 id="示例">示例</h3>
+<p>假设我们有一个数组叫array， *p =array; 那么：</p>
+<p>*p 代表了数组的第一个元素即 array[0],</p>
+<p>p + 1 代表了数组第一个元素的地址向后偏移一个单位的地址，如果array类型为 char 偏移量即为1，int偏移量为4 float 偏移量为4，以此类推。隐式的表示了数组第二个元素的地址。</p>
+<p>*p + 1 代表了数组第一个元素的值+1 即 array[0]的值 +1</p>
+<p>*(p + 1 ) 代表了数组下标为1的元素 ,即 p[1]</p>
+<p>所以我们可以很简单的得出一个 *（p+n)=p[n]; // *( + ) =[]</p>
+<p>那如果是多员数组呢？</p>
+<p>很简单 *（ *（p+n)+m) = p[n][m];</p>
+<h2 id="指针操作">指针操作</h2>
+<p>永远都要记得在函数中 <strong>只有下一级的指针才可以操作当前等级指针</strong>，你可能有点蒙，我来给你解释一下：</p>
+<p>没有*的我们姑且称为零级指针</p>
+<p>*为一级指针</p>
+<p>**为二级指针</p>
+<p>这里有 p *p **p;</p>
+<p>那么 <strong>*p</strong> 可以操作 <strong>p</strong> ,<strong>**p</strong> 可以操作 <strong>*p</strong>，以此类推</p>
+<p>如果你在尝试看懂一个多级指针，那么阅读顺序一定是从右往左的。</p>
+<p><strong>( * (* ( * (m)))</strong> 就比如这个,</p>
+<p>你要先看 <strong>m</strong>  然后看 <strong>*（m）</strong>;</p>
+<p>再看 <strong>* (*(m))</strong>;</p>
+<p>最后看 <strong>*( * ( * (m)))</strong>;</p>
+<p>千万不要想着一口吃一个胖子。</p>
+<h2 id="分享总结">分享总结</h2>
+<p>好了今天的分享就到这里了，要去忙了。</p>
+<p>这里分享一个比较不错的<a href="https://www.youtube.com/watch?v=h-HBipu_1P0&amp;list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_" target="_blank" rel="noopener noreffer">指针教程</a>，希望可以对屏幕前的你有帮助；</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-03-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/zh-cn/c_pointer/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://angusxw7.github.io/zh-cn/c_pointer/" data-title="C&#43;&#43; 指针" data-hashtags="Pointer,C&#43;&#43;,essence"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://angusxw7.github.io/zh-cn/c_pointer/" data-hashtag="Pointer"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://angusxw7.github.io/zh-cn/c_pointer/" data-title="C&#43;&#43; 指针"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://angusxw7.github.io/zh-cn/c_pointer/" data-title="C&#43;&#43; 指针"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://angusxw7.github.io/zh-cn/c_pointer/" data-title="C&#43;&#43; 指针" data-ralateuid="xxxx"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-cn/tags/pointer/">Pointer</a>,&nbsp;<a href="/zh-cn/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/zh-cn/tags/essence/">essence</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zh-cn/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zh-cn/hello-world/" class="prev" rel="prev" title="你好，世界！"><i class="fas fa-angle-left fa-fw"></i>你好，世界！</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/zh-cn/" target="_blank">XW7&amp;</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"XW7\u0026","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
