@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>C&#43;&#43; Pointer - XW7&amp; Blog</title><meta name="Description" content="A little about C pointers"><meta property="og:title" content="C&#43;&#43; Pointer" />
+<meta property="og:description" content="A little about C pointers" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://angusxw7.github.io/c_pointer/" /><meta property="og:image" content="https://angusxw7.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-09T18:52:30-08:00" />
+<meta property="article:modified_time" content="2022-03-09T18:52:30-08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://angusxw7.github.io/logo.png"/>
+
+<meta name="twitter:title" content="C&#43;&#43; Pointer"/>
+<meta name="twitter:description" content="A little about C pointers"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://angusxw7.github.io/c_pointer/" /><link rel="prev" href="https://angusxw7.github.io/hello-world/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "C++ Pointer",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/angusxw7.github.io\/c_pointer\/"
+        },"image": ["https:\/\/angusxw7.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Pointer, C\u002b\u002b, essence","wordcount":  1421 ,
+        "url": "https:\/\/angusxw7.github.io\/c_pointer\/","datePublished": "2022-03-09T18:52:30-08:00","dateModified": "2022-03-09T18:52:30-08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "XW7\u0026","logo": "https:\/\/angusxw7.github.io\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "XW7\u0026"
+            },"description": "A little about C pointers"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="XW7&amp; Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>XW7&amp; Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About XW7&amp; </a><a class="menu-item" href="https://github.com/angusXW7" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/c_pointer/" selected>English</option><option value="/zh-cn/c_pointer/">简体中文</option><option value="/fr/c_pointer/">Français</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="XW7&amp; Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>XW7&amp; Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About XW7&amp;</a><a class="menu-item" href="https://github.com/angusXW7" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/c_pointer/" selected>English</option><option value="/zh-cn/c_pointer/">简体中文</option><option value="/fr/c_pointer/">Français</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">C&#43;&#43; Pointer</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://angusxw7.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>XW7&</a></span>&nbsp;<span class="post-category">included in <a href="/categories/c++/"><i class="far fa-folder fa-fw"></i>C++</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-09">2022-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1421 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;<span id="/c_pointer/" class="leancloud_visitors" data-flag-title="C&#43;&#43; Pointer">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-pointer">WHAT IS POINTER</a>
+      <ul>
+        <li><a href="#examples">EXAMPLES：</a></li>
+        <li><a href="#heading">“*”</a></li>
+      </ul>
+    </li>
+    <li><a href="#const-and-">CONST AND *</a>
+      <ul>
+        <li><a href="#tip">TIP</a></li>
+        <li><a href="#applications">APPLICATIONS</a></li>
+        <li><a href="#expansion">EXPANSION</a></li>
+      </ul>
+    </li>
+    <li><a href="#array-and-">ARRAY AND *</a>
+      <ul>
+        <li><a href="#examples-1">EXAMPLES</a></li>
+      </ul>
+    </li>
+    <li><a href="#pointer-operations">POINTER OPERATIONS</a></li>
+    <li><a href="#share-and-summary">SHARE AND SUMMARY</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>The essence of the C languages  Pointer!</p>
+<p>Hello, I&rsquo;ve found time in my busy schedule to come back as promised. Today, I&rsquo;ll talk about pointers. It&rsquo;s said that the essence of C is pointers, but it&rsquo;s also true that C should be one of the few high-level languages that can manipulate the underlying memory with pointers. I&rsquo;m sure my understanding is not as deep as that of the top coders, after all, I&rsquo;m just a beginner, the wording is not accurate or logic is not strict, please enlighten me ~, if there is where to say the wrong, also welcome to point out!</p>
+<h2 id="what-is-pointer">WHAT IS POINTER</h2>
+<p>Before we expand the question, then, we need to figure out what a pointer is.</p>
+<p>We often say that a pointer is an address, and that a pointer variable is a variable used to store a memory address.</p>
+<p>As I understand it, a pointer is synonymous with your home, and a memory address is where your home actually is. When you say that a pointer points to such and such address, you are actually saying that your home is a synonym for where your home address is (that is, where your home lives). This sounds a bit like nonsense.</p>
+<h3 id="examples">EXAMPLES：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">int* ptr= 0X12345678;
+int* ptr = &amp; XW7 home;
+</code></pre></td></tr></table>
+</div>
+</div><p>We have an int pointer <strong>ptr</strong> (my home pronoun): <strong>int* ptr</strong>  ;</p>
+<p>This pointer points to (the actual address of my house): <strong>0X12345678</strong>; // Generally speaking, memory addresses are expressed in eight bits of hexadecimal, starting with 0X in order to distinguish from binary, octal and decimal</p>
+<p>It is generally written as <strong>int* ptr = &amp; XW7&rsquo;s home</strong>;</p>
+<p>Let&rsquo;s ignore this &ldquo;&amp;&rdquo; and read &ldquo;=&rdquo; as &ldquo;is&rdquo;, so now this sentence is saying that ptr is the home of xw7.</p>
+<p>Next, let&rsquo;s say I want to invite my friend to my house for the weekend, then I just say ptr to them and they surely can&rsquo;t know where my house is for no reason, right?</p>
+<p>So we&rsquo;ll use &ldquo;&amp;&rdquo; for the address, so int* ptr = &amp; XW7&rsquo;s home now becomes ptr = 12 City 34 56th Street 78 , the actual address of my house, and again, we read &ldquo;=&rdquo; as &ldquo;is&rdquo;, XW7&rsquo;s home is 78-56th street, 34th district, 12th city. This way my friends can find my house without any problem on weekends.</p>
+<h3 id="heading">“*”</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">int* *ptr // not exists
+int* ptr = sth ;
+ptr* = sth ;
+</code></pre></td></tr></table>
+</div>
+</div><p>The symbol &ldquo;<strong>*</strong>&rdquo; means something different when it follows a different owner.</p>
+<p>But we won&rsquo;t see int* * variableName (int* *ptr) as something that exists.</p>
+<p>We will only see int* variable name = something;</p>
+<p>or *ptr = something;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">char* c ; //char type pointer
+int*  i ; //int type pointer
+float* f ; //float type pointer
+
+</code></pre></td></tr></table>
+</div>
+</div><p>In general, if it follows a data type, like <strong>char int float</strong>, then it represents a pointer to that type</p>
+<p><strong>char*</strong> is a pointer to a <strong>char</strong> type;</p>
+<p><strong>int*</strong> is a <strong>int</strong> type pointer;</p>
+<p><strong>float*</strong> is a <strong>float</strong> pointer;</p>
+<p>and so on</p>
+<p>// on 32-bit systems, all pointers are 4 bytes in size.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">*ptr = XW7 home ; 
+ ptr = 0X12345678; 
+</code></pre></td></tr></table>
+</div>
+</div><p>But if it&rsquo;s followed by a variable name, like <strong>*ptr</strong> above, then it&rsquo;s a dereference, and you have to use a pronoun. In layman&rsquo;s terms, adding <strong>*</strong> to <strong>ptr</strong> means that <strong>ptr</strong> is encrypted and can only say <strong>XW7&rsquo;s home</strong>, but not the exact address of <strong>12 City 34, 56th Street, 78</strong>. That is, <strong>*ptr = XW7&rsquo;s home , *ptr is XW7&rsquo;s home</strong>.</p>
+<h2 id="const-and-">CONST AND *</h2>
+<p>I believe that many people have been confused by the placement of const and *, but when you get the key, you will find it very simple. You can tell what pointer constants and constant pointers are at a glance.</p>
+<p>First of all, someone may ask, What is a const? Ha ha, cosnt is actually a modifier, the thing that is modified by him can not be changed.</p>
+<p>Here I share my tips:</p>
+<h3 id="tip">TIP</h3>
+<p>First we list a few very common formats.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"> const int * ptr；// 1
+ int const * ptr；// 2
+ int * const ptr；// 3
+</code></pre></td></tr></table>
+</div>
+</div><p>How do we distinguish them ? It is very simple, we only need to look at two things, one is <strong>*</strong> and the other is <strong>ptr</strong>;</p>
+<p>If const is immediately followed by <strong>*</strong> then there is no doubt that const modifies *, which means that what * points to cannot be changed; // 1,2</p>
+<p>If const is immediately followed by <strong>variable name</strong> (i.e., ptr), then const modifies the variable name, which means that the value represented by the variable name cannot be changed. // 3</p>
+<p>Another very important thing is that const is a &ldquo;one-time thing&rdquo;. If you want more than one pointer or value that cannot be changed, you have to use more than one const, e.g.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"> const int* const ptr; // both int* and ptr are immutable
+ const int* const p1, const p2; // int* p1 p2 are immutable
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="applications">APPLICATIONS</h3>
+<p>So after we know who is not changeable, what do we use them for; first we can get two more useful information from the naming statement, one is who the pointer points to, and the other is what the pointing thing contains.</p>
+<p>Let&rsquo;s use the example of renting a house, where the pointer represents the house and the content inside represents the tenant.</p>
+<p>If what is pointed to cannot be changed, then it is now the landlord identity, that is, as long as it is my house, it does not matter which tenants, you can change them at will.</p>
+<p>If the content of the pointer cannot be changed, then it is now the identity of the tenant, that is to say, as long as I am renting the house, it does not matter which house, you can change it at will.</p>
+<h3 id="expansion">EXPANSION</h3>
+<p>Further down the line, it should touch on objects and classes, let&rsquo;s briefly say.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const returnType functionName ( Parameter); //  return type can not be modified
+returnType functionName (const Parameter); //  incoming parameters can not be modified
+returnType functionName (Parameter) const; //  class member parameters can not be modified
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="array-and-">ARRAY AND *</h2>
+<p>We all know that arrays are implicitly degraded to pointers when they are passed as arguments to functions, so we arbitrarily treat arrays as a kind of pointer.</p>
+<p>Here are a few confusing combinations of arrays and *.</p>
+<h3 id="examples-1">EXAMPLES</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">int array[];
+int* p = array;
+*p ;            // array[0]
+p+1 ;           //array[0]address + 4
+*p+1 ;          //array[0]value + 1
+*(p+1) ;        //array[1]
+
+*（ *（p+n)+m) = p[n][m];
+
+</code></pre></td></tr></table>
+</div>
+</div><p>Suppose we have an array called array, *p =array; then.</p>
+<p>*p represents the first element of the array i.e. array[0] ;</p>
+<p>p + 1 represents the address of the first element of the array shifted back by one unit, if array is of type char the offset is 1, int the offset is 4 float the offset is 4, and so on. The address of the second element of the array is represented implicitly ;</p>
+<p>*p + 1 represents the value of the first element of the array + 1 i.e. (the value of array[0] ) + 1 ;</p>
+<p>*(p + 1 ) represents the element of the array with subscript 1, i.e. p[1] ;</p>
+<p>So we can simply derive a *(p+n) = p[n] ; // *( + ) = []</p>
+<p>What about if it&rsquo;s a multi-dimensional arrays ?</p>
+<p>It&rsquo;s simple *( *(p+n)+m) = p[n][m];</p>
+<h2 id="pointer-operations">POINTER OPERATIONS</h2>
+<p>Always remember that in the function __ only the next level pointer can operate the current level pointer __, you may be a little confuse, I&rsquo;ll explain to you:</p>
+<p>Without * we will call it a zero-level pointer</p>
+<p>*is a first-level pointer</p>
+<p>** is the second level pointer</p>
+<p>Here we have p *p **p;</p>
+<p>So <strong>*p</strong> can operate on <strong>p</strong>, <strong>**p</strong> can operate on <strong>*p</strong>, and so on</p>
+<p>If you are trying to read a multilevel pointer, the reading order must be from right to left.</p>
+<p><strong>( * (* ( * ( * (m)))</strong> is like this,</p>
+<p>You have to look at <strong>m</strong> first and then look at <strong>* (m)</strong>;</p>
+<p>then look at <strong>* (* (m))</strong>;</p>
+<p>And finally look at <strong>*( * ( * (m)))</strong>;</p>
+<h2 id="share-and-summary">SHARE AND SUMMARY</h2>
+<p>Well that&rsquo;s it for today&rsquo;s sharing, going to get busy.</p>
+<p>Here to share a better <a href="https://www.youtube.com/watch?v=h-HBipu_1P0&amp;list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_" target="_blank" rel="noopener noreffer">pointer tutorial</a>, I hope it can be helpful to you in front of the screen.</p>
+<p>Heihei！</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-03-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/c_pointer/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://angusxw7.github.io/c_pointer/" data-title="C&#43;&#43; Pointer" data-hashtags="Pointer,C&#43;&#43;,essence"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://angusxw7.github.io/c_pointer/" data-hashtag="Pointer"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://angusxw7.github.io/c_pointer/" data-title="C&#43;&#43; Pointer"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://angusxw7.github.io/c_pointer/" data-title="C&#43;&#43; Pointer"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://angusxw7.github.io/c_pointer/" data-title="C&#43;&#43; Pointer"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pointer/">Pointer</a>,&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/tags/essence/">essence</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hello-world/" class="prev" rel="prev" title="Hello,World！"><i class="fas fa-angle-left fa-fw"></i>Hello,World！</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">XW7&amp;</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"XW7\u0026","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

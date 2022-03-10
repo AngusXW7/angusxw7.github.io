@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/angusxw7.github.io\/zh-cn\/c_pointer\/"
-        },"image": ["https:\/\/angusxw7.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Pointer, C\u002b\u002b, essence","wordcount":  2242 ,
+        },"image": ["https:\/\/angusxw7.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Pointer, C\u002b\u002b, essence","wordcount":  2413 ,
         "url": "https:\/\/angusxw7.github.io\/zh-cn\/c_pointer\/","datePublished": "2022-03-09T18:52:30-08:00","dateModified": "2022-03-09T18:52:30-08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "XW7\u0026","logo": "https:\/\/angusxw7.github.io\/avatar.png"},"author": {
@@ -47,7 +47,7 @@
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/zh-cn/posts/"> 所有文章 </a><a class="menu-item" href="/zh-cn/tags/"> 标签 </a><a class="menu-item" href="/zh-cn/categories/"> 分类 </a><a class="menu-item" href="/zh-cn/about/"> 关于XW7&amp; </a><a class="menu-item" href="https://github.com/angusXW7" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/c_pointer/" selected>简体中文</option></select>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/c_pointer/">English</option><option value="/zh-cn/c_pointer/" selected>简体中文</option><option value="/fr/c_pointer/">Français</option></select>
                     </a><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
@@ -94,7 +94,7 @@
                 </div><a class="menu-item" href="/zh-cn/posts/" title="">所有文章</a><a class="menu-item" href="/zh-cn/tags/" title="">标签</a><a class="menu-item" href="/zh-cn/categories/" title="">分类</a><a class="menu-item" href="/zh-cn/about/" title="">关于XW7&amp;</a><a class="menu-item" href="https://github.com/angusXW7" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/zh-cn/c_pointer/" selected>简体中文</option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/c_pointer/">English</option><option value="/zh-cn/c_pointer/" selected>简体中文</option><option value="/fr/c_pointer/">Français</option></select>
                 </a></div>
     </div>
 </header>
@@ -110,7 +110,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">C&#43;&#43; 指针</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://angusxw7.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>XW7&</a></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/c++/"><i class="far fa-folder fa-fw"></i>C++</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-09">2022-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2242 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-09">2022-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2413 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/zh-cn/c_pointer/" class="leancloud_visitors" data-flag-title="C&#43;&#43; 指针">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -150,54 +150,148 @@
 <p>我们经常说，指针就是地址，指针变量是用来存放内存地址的变量的。</p>
 <p>我的理解呢，指针就相当于你家的代名词，而内存地址就是你家实际在的地方。常说的指针指向了某某地址，其实就是在说，你家这个代名词说明了你家地址所在地（就是你家住哪）。这样讲听着有点像废话。</p>
 <h3 id="我们还是来举个例子吧">我们还是来举个例子吧：</h3>
-<p>我们有一个整形指针 <strong>ptr</strong> （我家代名词）：  <strong>int* ptr</strong>  ;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">int* ptr= 0X12345678;
+int* ptr = &amp; XW7的家;
+</code></pre></td></tr></table>
+</div>
+</div><p>我们有一个整形指针 <strong>ptr</strong> （我家代名词）：  <strong>int* ptr</strong>  ;</p>
 <p>这个指针指向了（我家实际地址）：<strong>0X12345678</strong>; //一般情况下内存地址用八位的十六进制表示，0X开头是为了和二进制，八进制还有十进制作区分</p>
 <p>一般写成 <strong>int* ptr = &amp; XW7的家</strong>;</p>
 <p>我们先忽略这个 “&amp;” ，把 “=” 读作 “是” ，那么现在这句话是不是就在说 ptr 是 xw7的家。</p>
 <p>接下来，比如我要邀请我的朋友周末来我家玩，那我光和他说 ptr 他肯定不能平白无故的知道我家在哪，对吧。</p>
 <p>所以我们要用“&amp;”表示地址，那么int* ptr = &amp; XW7的家 现在就变成了 ptr = 12市34区56街78号，即我家的实际地址，同样的，我们把“=”读作“是”，XW7的家是12市34区56街78号。这样我的朋友们周末就可以顺利的找到我家了。</p>
 <h3 id="heading">“*”</h3>
-<p>&ldquo;<strong>*</strong>&ldquo;这个符号呢跟随不同的主人，就会代表不同的意思，我们俗称嫁鸡随鸡嫁狗随狗。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">int* *ptr //不存在
+int* ptr = 什么 ;
+ptr* = 什么 ;
+</code></pre></td></tr></table>
+</div>
+</div><p>&ldquo;<strong>*</strong>&ldquo;这个符号呢跟随不同的主人，就会代表不同的意思，我们俗称嫁鸡随鸡嫁狗随狗。</p>
 <p>但是我们不会看见int* * 变量名（int* *ptr） 这种东西存在的；</p>
 <p>我们只会看到int* 变量名 = 什么;</p>
 <p>或者 *ptr = 什么;</p>
-<p>一般情况下，如果它跟的是数据类型，比如 <strong>char int float</strong> 这种，那么它就代表这个类型的指针</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">char* c ;//char类型指针
+int*  i ;//int类型指针
+float* f ;//float类型指针
+</code></pre></td></tr></table>
+</div>
+</div><p>一般情况下，如果它跟的是数据类型，比如 <strong>char int float</strong> 这种，那么它就代表这个类型的指针</p>
 <p><strong>char*</strong> 就是 <strong>char</strong> 类型指针;</p>
 <p><strong>int*</strong> 就是 <strong>int</strong> 类型指针;</p>
 <p><strong>float*</strong> 就是 <strong>float</strong> 类型指针;</p>
 <p>以此类推</p>
 <p>// 32位系统下，所有的指针大小都为4字节；</p>
-<p>但是如果它跟了变量名称，就比如上面的 <strong>*ptr</strong> 那它就代表解引用了，就要使用代名词了。通俗的来讲给 <strong>ptr</strong> 加上了 <strong>*</strong> 就是把 <strong>ptr</strong> 被加密了 只能说 <strong>XW7的家</strong> ， 而不能将 <strong>12市34区56街78号</strong> 这个确切的地址讲出来。即 <strong>*ptr = XW7的家 , *ptr是XW7的家</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">*ptr = XW7 的家 ; 
+ ptr = 0X12345678; 
+</code></pre></td></tr></table>
+</div>
+</div><p>但是如果它跟了变量名称，就比如上面的 <strong>*ptr</strong> 那它就代表解引用了，就要使用代名词了。通俗的来讲给 <strong>ptr</strong> 加上了 <strong>*</strong> 就是把 <strong>ptr</strong> 被加密了 只能说 <strong>XW7的家</strong> ， 而不能将 <strong>12市34区56街78号</strong> 这个确切的地址讲出来。即 <strong>*ptr = XW7的家 , *ptr是XW7的家</strong>。</p>
 <h2 id="const与的爱恨情仇">const与*的爱恨情仇</h2>
 <p>我相信很多人都因为 const和 * 的摆放位置而被搞得晕头转向过，不过当你抓住的精髓，你就会觉得非常的简单了。什么指针常量，常量指针的，一眼就可以分辨出来。</p>
 <p>首先可能有人问，const是什么东西啊。哈哈， cosnt其实就是一个修饰词，被他修饰的东西不可以改变。</p>
 <p>这里我分享一下我的小技巧：</p>
 <h3 id="技巧">技巧</h3>
 <p>首先我们列出来几种很常见的格式：</p>
-<p>1.const int * ptr；</p>
-<p>2.int const * ptr；</p>
-<p>3.int * const ptr；</p>
-<p>我们要怎么来区分呢?很简单,我们只需要看两个东西，一个就是 <strong>*</strong> 还有一个就是 <strong>ptr</strong>;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"> const int * ptr；// 1
+ int const * ptr；// 2
+ int * const ptr；// 3
+</code></pre></td></tr></table>
+</div>
+</div><p>我们要怎么来区分呢?很简单,我们只需要看两个东西，一个就是 <strong>*</strong> 还有一个就是 <strong>ptr</strong>;</p>
 <p>如果const后面紧跟着的是 <strong>*</strong> 那么毫无疑问 const 修饰了 * ，代表 *指向的东西不可以改变；//1,2</p>
 <p>如果const后面紧跟着的是 <strong>变量名</strong> （即ptr），那么const就是修饰了变量名，代表变量名所代表的值不可以被改变。//3</p>
 <p>还有一件非常重要的事情，就是const是一次性的，要是想要多个不能被改变的指向或者值，就要使用多个const，如：</p>
-<p>const int* const ptr; // int* 与 ptr 都不可变
-const int* const p1, const p2; // int* p1 p2全都不可变</p>
-<h3 id="用途">用途</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"> const int* const ptr;  // int* 与 ptr 都不可变
+ const int* const p1, const p2;  // int* p1 p2全都不可变
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="用途">用途</h3>
 <p>那么知道谁不可以改变以后，我们要用它们来干什么呢；首先我们从命名语句中可以得到两个比较有用的信息，一个是指针指向谁，还有一个就是指向的东西包含了什么内容。</p>
 <p>我们用租房子来举例子，指针代表房子，里面的内容代表租客；</p>
 <p>如果指向的东西不能改变，那现在就是房东身份，也就是说只要是我的房子就行，哪些租客无所谓，可以随意更换。</p>
 <p>如果指向的内容不能改变，那现在就是租客身份，也就是说只要是我在租房就行，哪间房子无所谓，可以随意更换。</p>
 <h3 id="延伸">延伸</h3>
-<p>再往下延伸呢，应该就要触及到对象和类了，我们简单的说一下；</p>
-<p>1.const 返回类型 函数名 （参数）； // 表示我的返回类型不能修改</p>
-<p>2.返回类型 函数名 （const 参数）；// 表示我的传入参数不能修改</p>
-<p>3.返回类型 函数名 （参数）const ；// 表示我的类成员参数不能修改</p>
-<h2 id="数组与的爱恨情仇">数组与*的爱恨情仇</h2>
+<p>再往下延伸呢，应该就要触及到对象和类了，我们简单的说一下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const 返回类型 函数名 （参数）； // 表示我的返回类型不能修改
+返回类型 函数名 （const 参数）； // 表示我的传入参数不能修改
+返回类型 函数名 （参数）const ； // 表示我的类成员参数不能修改
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="数组与的爱恨情仇">数组与*的爱恨情仇</h2>
 <p>我们都知道当数组被当做参数传入函数的的时候会被隐式的退化成指针，所以我们任性的把数组当成一种指针</p>
 <p>下面我们来说几种容易让人混淆的数组与*的组合：</p>
 <h3 id="示例">示例</h3>
-<p>假设我们有一个数组叫array， *p =array; 那么：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"> int array[];
+ int* p = array;
+ *p ;            // array[0]
+ p+1 ;           //array[0]的地址 + 4
+ *p+1 ;          //array[0]的值 + 1
+ *(p+1) ;        //array[1]
+
+ *（ *（p+n)+m) = p[n][m];
+
+</code></pre></td></tr></table>
+</div>
+</div><p>假设我们有一个数组叫array， *p =array; 那么：</p>
 <p>*p 代表了数组的第一个元素即 array[0],</p>
 <p>p + 1 代表了数组第一个元素的地址向后偏移一个单位的地址，如果array类型为 char 偏移量即为1，int偏移量为4 float 偏移量为4，以此类推。隐式的表示了数组第二个元素的地址。</p>
 <p>*p + 1 代表了数组第一个元素的值+1 即 array[0]的值 +1</p>
@@ -220,7 +314,8 @@ const int* const p1, const p2; // int* p1 p2全都不可变</p>
 <p>千万不要想着一口吃一个胖子。</p>
 <h2 id="分享总结">分享总结</h2>
 <p>好了今天的分享就到这里了，要去忙了。</p>
-<p>这里分享一个比较不错的<a href="https://www.youtube.com/watch?v=h-HBipu_1P0&amp;list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_" target="_blank" rel="noopener noreffer">指针教程</a>，希望可以对屏幕前的你有帮助；</p></div><div class="post-footer" id="post-footer">
+<p>这里分享一个比较不错的<a href="https://www.youtube.com/watch?v=h-HBipu_1P0&amp;list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_" target="_blank" rel="noopener noreffer">指针教程</a>，希望可以对屏幕前的你有帮助；</p>
+<p>嘿嘿~</p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
