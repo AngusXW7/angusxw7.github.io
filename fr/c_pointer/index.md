@@ -94,9 +94,9 @@ First we list a few very common formats.
  ```
  How do we distinguish them ? It is very simple, we only need to look at two things, one is __*__ and the other is __ptr__;
 
- If const is immediately followed by __*__ then there is no doubt that const modifies *, which means that what * points to cannot be changed; // 1,2
+ If const is immediately followed by __*__ then there is no doubt that const modifies *ptr(content), which means that *ptr cannot be changed; //1,2
 
- If const is immediately followed by __variable name__ (i.e., ptr), then const modifies the variable name, which means that the value represented by the variable name cannot be changed. // 3
+ If const is immediately followed by __variable name__ (i.e., ptr), then const modifies the variable name, which means that ptr(pointer) cannot be changed. //3
 
  Another very important thing is that const is a "one-time thing". If you want more than one pointer or value that cannot be changed, you have to use more than one const, e.g.
 

@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/angusxw7.github.io\/fr\/c_pointer\/"
-        },"image": ["https:\/\/angusxw7.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Pointer, C\u002b\u002b, essence","wordcount":  1421 ,
+        },"image": ["https:\/\/angusxw7.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Pointer, C\u002b\u002b, essence","wordcount":  1410 ,
         "url": "https:\/\/angusxw7.github.io\/fr\/c_pointer\/","datePublished": "2022-03-09T18:52:30-08:00","dateModified": "2022-03-09T18:52:30-08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "XW7\u0026","logo": "https:\/\/angusxw7.github.io\/avatar.png"},"author": {
@@ -110,7 +110,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">C&#43;&#43; Pointer</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://angusxw7.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>XW7&</a></span>&nbsp;<span class="post-category">inclus dans <a href="/fr/categories/c++/"><i class="far fa-folder fa-fw"></i>C++</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-09">2022-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1421 mots&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-09">2022-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;1410 mots&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;7 minutes&nbsp;<span id="/fr/c_pointer/" class="leancloud_visitors" data-flag-title="C&#43;&#43; Pointer">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;vues
                     </span>&nbsp;</div>
@@ -233,8 +233,8 @@ float* f ; //float type pointer
 </code></pre></td></tr></table>
 </div>
 </div><p>How do we distinguish them ? It is very simple, we only need to look at two things, one is <strong>*</strong> and the other is <strong>ptr</strong>;</p>
-<p>If const is immediately followed by <strong>*</strong> then there is no doubt that const modifies *, which means that what * points to cannot be changed; // 1,2</p>
-<p>If const is immediately followed by <strong>variable name</strong> (i.e., ptr), then const modifies the variable name, which means that the value represented by the variable name cannot be changed. // 3</p>
+<p>If const is immediately followed by <strong>*</strong> then there is no doubt that const modifies *ptr(content), which means that *ptr cannot be changed; //1,2</p>
+<p>If const is immediately followed by <strong>variable name</strong> (i.e., ptr), then const modifies the variable name, which means that ptr(pointer) cannot be changed. //3</p>
 <p>Another very important thing is that const is a &ldquo;one-time thing&rdquo;. If you want more than one pointer or value that cannot be changed, you have to use more than one const, e.g.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
