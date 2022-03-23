@@ -4,9 +4,16 @@
         <link>https://angusxw7.github.io/zh-cn/</link>
         <description>关于 XW7&amp;</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>angusli951102@gmail.com (XW7&amp;)</managingEditor>
-            <webMaster>angusli951102@gmail.com (XW7&amp;)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 09 Mar 2022 18:52:30 -0800</lastBuildDate>
+            <webMaster>angusli951102@gmail.com (XW7&amp;)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 16 Mar 2022 18:52:30 -0800</lastBuildDate>
             <atom:link href="https://angusxw7.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>类与成员函数</title>
+    <link>https://angusxw7.github.io/zh-cn/special-member/</link>
+    <pubDate>Wed, 16 Mar 2022 18:52:30 -0800</pubDate>
+    <author>作者</author>
+    <guid>https://angusxw7.github.io/zh-cn/special-member/</guid>
+    <description><![CDATA[<p>C++类与它的六种成员函数！</p>]]></description>
+</item><item>
     <title>C&#43;&#43; 指针</title>
     <link>https://angusxw7.github.io/zh-cn/c_pointer/</link>
     <pubDate>Wed, 09 Mar 2022 18:52:30 -0800</pubDate>
