@@ -2,6 +2,19 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://angusxw7.github.io/fr/memory-division/</loc><lastmod>2022-04-06T08:57:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/memory-division/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="https://angusxw7.github.io/zh-cn/memory-division/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fr"
+                    href="https://angusxw7.github.io/fr/memory-division/"
+                    /></url><url>
             <loc>https://angusxw7.github.io/fr/keyword/</loc><lastmod>2022-03-23T13:48:08-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -54,7 +67,7 @@
                     hreflang="fr"
                     href="https://angusxw7.github.io/fr/hello-world/"
                     /></url><url>
-            <loc>https://angusxw7.github.io/fr/tags/c&#43;&#43;/</loc><lastmod>2022-03-23T13:48:08-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://angusxw7.github.io/fr/tags/c&#43;&#43;/</loc><lastmod>2022-04-06T08:57:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://angusxw7.github.io/tags/c&#43;&#43;/"
@@ -67,7 +80,7 @@
                     hreflang="fr"
                     href="https://angusxw7.github.io/fr/tags/c&#43;&#43;/"
                     /></url><url>
-            <loc>https://angusxw7.github.io/fr/categories/c&#43;&#43;/</loc><lastmod>2022-03-23T13:48:08-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://angusxw7.github.io/fr/categories/c&#43;&#43;/</loc><lastmod>2022-04-06T08:57:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://angusxw7.github.io/categories/c&#43;&#43;/"
@@ -80,7 +93,7 @@
                     hreflang="fr"
                     href="https://angusxw7.github.io/fr/categories/c&#43;&#43;/"
                     /></url><url>
-            <loc>https://angusxw7.github.io/fr/categories/</loc><lastmod>2022-03-23T13:48:08-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://angusxw7.github.io/fr/categories/</loc><lastmod>2022-04-06T08:57:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://angusxw7.github.io/categories/"
@@ -92,6 +105,58 @@
                     rel="alternate"
                     hreflang="fr"
                     href="https://angusxw7.github.io/fr/categories/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/fr/posts/</loc><lastmod>2022-04-06T08:57:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/posts/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="https://angusxw7.github.io/zh-cn/posts/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fr"
+                    href="https://angusxw7.github.io/fr/posts/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/fr/tags/</loc><lastmod>2022-04-06T08:57:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/tags/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="https://angusxw7.github.io/zh-cn/tags/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fr"
+                    href="https://angusxw7.github.io/fr/tags/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/fr/</loc><lastmod>2022-04-06T08:57:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="https://angusxw7.github.io/zh-cn/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fr"
+                    href="https://angusxw7.github.io/fr/"
+                    /></url><url>
+            <loc>https://angusxw7.github.io/fr/tags/memory-division/</loc><lastmod>2022-04-06T08:57:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://angusxw7.github.io/tags/memory-division/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="https://angusxw7.github.io/zh-cn/tags/memory-division/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fr"
+                    href="https://angusxw7.github.io/fr/tags/memory-division/"
                     /></url><url>
             <loc>https://angusxw7.github.io/fr/tags/keyword/</loc><lastmod>2022-03-23T13:48:08-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
@@ -105,45 +170,6 @@
                     rel="alternate"
                     hreflang="fr"
                     href="https://angusxw7.github.io/fr/tags/keyword/"
-                    /></url><url>
-            <loc>https://angusxw7.github.io/fr/posts/</loc><lastmod>2022-03-23T13:48:08-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://angusxw7.github.io/posts/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://angusxw7.github.io/zh-cn/posts/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="fr"
-                    href="https://angusxw7.github.io/fr/posts/"
-                    /></url><url>
-            <loc>https://angusxw7.github.io/fr/tags/</loc><lastmod>2022-03-23T13:48:08-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://angusxw7.github.io/tags/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://angusxw7.github.io/zh-cn/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="fr"
-                    href="https://angusxw7.github.io/fr/tags/"
-                    /></url><url>
-            <loc>https://angusxw7.github.io/fr/</loc><lastmod>2022-03-23T13:48:08-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://angusxw7.github.io/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://angusxw7.github.io/zh-cn/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="fr"
-                    href="https://angusxw7.github.io/fr/"
                     /></url><url>
             <loc>https://angusxw7.github.io/fr/tags/class/</loc><lastmod>2022-03-16T18:52:30-08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
