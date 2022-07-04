@@ -22,7 +22,7 @@
   * **good at** C++，know part of 14/17/20 new features and Debug capability；
   * **good at** Unreal Engine 4 ；
   * **master** data structures and algorithms, with good programming habits；
-  * **master** the basic application of MYSQL //CRUD；
+  * **master** the basic application of MySQL //CRUD；
   * **know** basic grammar and simple usage of Golang；
   * **know** Unreal Engine 5，have tried out the UE5 preview and is learning；
   * **know** Unity3D base on the development of mobile games；
